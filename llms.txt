@@ -1,0 +1,9 @@
+# outcap
+
+> CLI that runs a command (or reads stdin) and caps its output to a token budget for LLM agents: keeps head+tail, rescues error lines from the middle, collapses repeats, strips ANSI, optional full log file, JSON output, exit code passthrough.
+
+Usage: `outcap [-t TOKENS] [--json] [--save PATH|auto] [--timeout S] -- COMMAND...` or `cmd | outcap -t TOKENS`
+Exit codes: wrapped command's code; 124 timeout; 127 not found; 2 usage.
+
+- [README](https://github.com/sytegrok/outcap/blob/main/README.md): install, examples, JSON schema
+- [AGENTS.md](https://github.com/sytegrok/outcap/blob/main/AGENTS.md): agent instructions
